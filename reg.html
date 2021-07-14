@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mediaqueries.css">
+
+    <!--Bootstrap Scripts-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- fontawesome kits -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+
+<body id="reg">
+
+    <form id="regForm" action="/action_page.php">
+
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+
+        <!-- One "tab" for each step in the form: -->
+        <div class="tab">
+            <h1 class="register-title">How do you want to sign in?</h1>
+            <p><button class="btn survey-btn facebook"><i class="fab fa-facebook-f"></i>
+                    Facebook</button></p>
+            <p><button class="btn survey-btn gmail"><i class="fab fa-google"></i> Gmail</button></p>
+            <p><button class="btn survey-btn truecaller"><i class="fas fa-phone-alt"></i>
+                    Truecaller</button></p>
+            <p><button class="btn survey-btn linked-in"><i class="fab fa-linkedin-in"></i> Linked
+                    in</button></p>
+            <button type="button" class="btn survey-btn email" id="nextBtn1" onclick="nextPrev(1)"><i class="fab fa-linkedin-in"></i> Email</button>
+        </div>
+        <div class="tab">
+            <h1 class="register-title">Sign up with email</h1>
+            <p><input type="text" placeholder="Enter your name" oninput="this.className = ''" name="name"></p>
+            <p><input type="email" placeholder="Enter your email" oninput="this.className = ''" name="email"></p>
+            <p><input type="tel" placeholder="Phone number" oninput="this.className = ''" name="lname"></p>
+        </div>
+        <div class="tab">
+            <h1 class="register-title">What best describes you?</h1>
+            <p><input id="radiobtn" type="radio" placeholder="First name..." oninput="this.className = ''"
+                    name="description"><label class="radio-title">Individual</label></p>
+            <p><input id="radiobtn" type="radio" placeholder="Last name..." oninput="this.className = ''"
+                    name="description"><span class="radio-title">School Academy</span></p>
+            <p><input id="radiobtn" type="radio" placeholder="Phone number" oninput="this.className = ''"
+                    name="description"><span class="radio-title">Small Business</span></p>
+            <p><input id="radiobtn" type="radio" placeholder="Phone number" oninput="this.className = ''"
+                    name="description"><span class="radio-title">Company</span></p>
+        </div>
+        <div class="tab">
+            <img class="cong-img" src="images/fireworks.png" alt="">
+            <h1 class="register-title">Congratulations! you just earned $10 in your wallet. Complete
+                Signing up and get $20.</h1>
+        </div>
+        <div class="tab"><h1 class="register-title">For Individual Educators</h1>
+            <h3 class="register-title">Do you also hold in-person training?</h3>
+        </div>
+        <div class="tab">Login Info:
+            <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
+            <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+        </div>
+        <div style="overflow:auto;">
+            <div style="text-align: center;margin-top: 3rem;">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+            </div>
+        </div>
+        
+    </form>
+
+    <script>
+        var currentTab = 0; // Current tab is set to be the first tab (0)
+        showTab(currentTab); // Display the current tab
+
+        function showTab(n) {
+            // This function will display the specified tab of the form...
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            //... and fix the Previous/Next buttons:
+            if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+                document.getElementById("nextBtn").style.display = "none";
+                document.getElementById("nextBtn").innerHTML = "Email";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
+                document.getElementById("nextBtn").style.display = "inline";
+            }
+            if (n == 3) {
+                document.getElementById("prevBtn").style.display = "none";
+                document.getElementById("nextBtn").style.display = "inline";
+                document.getElementById("nextBtn").innerHTML = "Great! Continue";
+            }
+            if (n == 4) {
+                document.getElementById("prevBtn").style.display = "inline";
+                document.getElementById("nextBtn").style.display = "inline";
+                document.getElementById("nextBtn").innerHTML = "Yes";
+                document.getElementById("prevBtn").innerHTML = "No";
+            }
+            if (n == (x.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "Submit";
+            } else {
+                document.getElementById("nextBtn").innerHTML = "Next";
+            }
+            //... and run a function that will display the correct step indicator:
+            fixStepIndicator(n)
+        }
+
+        function nextPrev(n) {
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab");
+            // Exit the function if any field in the current tab is invalid:
+            if (n == 1 && !validateForm()) return false;
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            // if you have reached the end of the form...
+            if (currentTab >= x.length) {
+                // ... the form gets submitted:
+                document.getElementById("regForm").submit();
+                return false;
+            }
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+        }
+
+        function validateForm() {
+            // This function deals with validation of the form fields
+            var x, y, i, valid = true;
+            x = document.getElementsByClassName("tab");
+            y = x[currentTab].getElementsByTagName("input");
+            // A loop that checks every input field in the current tab:
+            for (i = 0; i < y.length; i++) {
+                // If a field is empty...
+                if (y[i].value == "") {
+                    // add an "invalid" class to the field:
+                    y[i].className += " invalid";
+                    // and set the current valid status to false
+                    valid = false;
+                }
+            }
+            // If the valid status is true, mark the step as finished and valid:
+            if (valid) {
+                document.getElementsByClassName("step")[currentTab].className += " finish";
+            }
+            return valid; // return the valid status
+        }
+
+        function fixStepIndicator(n) {
+            // This function removes the "active" class of all steps...
+            var i, x = document.getElementsByClassName("step");
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+            }
+            //... and adds the "active" class on the current step:
+            x[n].className += " active";
+        }
+    </script>
+
+</body>
+
+</html>
